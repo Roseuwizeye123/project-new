@@ -1,16 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Contact = () => {
+function Contact() {
   return (
-    <>
     <div>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/contact'>Contact</Link>
+      contact
     </div>
-    <div> I am CONTACT</div>
-    </>
   )
 }
 

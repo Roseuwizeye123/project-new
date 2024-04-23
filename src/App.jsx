@@ -1,25 +1,24 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
-import './App.css'
-import About from './components/About'
-import Contact from './components/Contact'
-import Home from './components/Home'
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Main from './components/Main';
 
-
-
-
-const App =() => {
+const App = () => {
   return (
-    <div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-            <Route path="/About" element={<About />}></Route>
-            <Route path="/Contact" element={<Contact />} />
-            
-      </Routes>
-    </BrowserRouter>
-    </div>
+    <>
+<BrowserRouter>
+  <Routes>
+    <Route path="/"element ={<Main />} >
+<Route index element ={<Home />}/>
+<Route path="/about"element ={<About />}/>
+<Route path="/contact"element ={<Contact/>}/>
+</Route>
+
+  </Routes>
+</BrowserRouter>
+</>
   )
 }
 
